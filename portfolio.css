@@ -1,0 +1,138 @@
+@font-face {
+    font-family: Robotocondensed;
+    src: url(fonts/robotocondensed/Robotocondensed.ttf);
+}
+body {
+	margin: 0;
+	font-family: Robotocondensed;
+	--common-padding: 40px;
+}
+/**********************HEADER************************/
+header {
+	position: fixed;
+    width: 25%;
+    min-height: 100vh;
+    padding-top: 20px;
+    overflow: hidden;
+    background-color: #c6e2ee;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+header p {
+	margin: 0;
+	font-size: 18px;
+	text-align: center;
+}
+header .my-photo {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 50px auto;
+}
+header img {
+	width: 100%;
+}
+/*************************MAIN********************************/
+main {
+	margin-left: 25%;
+	border-left: 5px solid #eee;
+	height: 100vh;
+	padding: 30px var(--common-padding) 30px 0;
+}
+main ul {
+	list-style: none;
+	margin: 30px 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-gap: 30px;
+}
+main li {
+	border: 1px solid #ddd;
+}
+main a {
+	text-decoration: none;
+	color: #000;
+	font-family: Robotocondensed;
+}
+main img {
+	width: 100%;
+	display: block;
+}
+main p {
+	margin: 0;
+	font-size: 18px;
+	padding: 20px 10px;
+}
+main h2 {
+	display: inline-block;
+	padding: 10px 20px 10px 60px;
+	background-color: #ffcd38;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	position: relative;
+	margin: 0;
+}
+main h2:after {
+	display: block;
+	width: 6px;
+	height: 100%;
+	position: absolute;
+	bottom: 5px;
+	left: -5px;
+	content: "";
+	border: 1px solid #ebbd34;
+	transform: skew(0deg,65deg);
+	-moz-transform: skew(0deg,65deg);
+	background: #ebbd34;
+	box-sizing: border-box;
+}
+
+@media (max-width: 800px){
+	header {
+		width: 100%;
+		min-height: unset;
+		padding: 0 var(--common-padding);
+		flex-flow: row;
+		justify-content: space-between;
+		position: unset;
+		box-sizing: border-box;
+	}
+	header .my-photo {
+		width: 100px;
+		height: 100px;
+		margin: 40px 0;
+		order: -1;
+		flex-shrink: 0;
+	}
+	header h1 {
+		text-align: right;
+	}
+	header p {
+		text-align: right;
+	}
+	main {
+		margin-left: 0;
+		border: unset;
+		padding-top: 0;
+	}
+	main h2 {
+		width: calc(100% - 20px);
+		padding-left: var(--common-padding);
+	}
+}
+@media (max-width: 400px){
+	body {
+		--common-padding: 20px;
+	}
+	header h1 {
+		font-size: 26px;
+	}
+	main ul {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		padding-left: 20px;
+	}
+}
