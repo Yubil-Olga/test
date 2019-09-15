@@ -1,0 +1,23 @@
+header .swiper-container {
+	width: calc(100% - 14vw);
+}
+header .swiper-wrapper {
+	height: calc(100% - 80px);
+}
+header .swiper-pagination {
+	text-align: right;
+	position: relative;
+    margin-top: 30px;
+}
+header .swiper-container-horizontal>.swiper-pagination-bullets  {
+	left: 0;
+	bottom: 0;
+}
+header .swiper-pagination-bullet, .reviews .swiper-pagination-bullet {
+	width: 30px;
+	height: 4px;
+	border-radius: 0;
+}
+header .swiper-pagination-bullet-active {
+	background: #f8a25a;
+}
