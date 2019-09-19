@@ -36,6 +36,9 @@ header .my-photo {
 header img {
 	width: 100%;
 }
+header a {
+	text-decoration: none;
+}
 .about p:first-child {
 	text-align: center;
 }
