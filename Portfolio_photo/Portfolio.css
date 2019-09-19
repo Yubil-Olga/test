@@ -1,0 +1,866 @@
+@font-face {
+    font-family: SegoeUI;
+    src: url(fonts/9404.ttf);
+}
+
+
+    
+
+@media (max-width: 680px) {
+    header ul li {display: none;}    
+    header nav {position: relative;
+                cursor: pointer;}
+    header nav:before {content:"";
+                       width: 30px;
+                        height: 3px;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        position: absolute;
+                        right: 0;
+                        box-shadow: 0 10px #fff,
+                                    0 20px #fff;}
+    header nav:hover li {display: block;
+                        }
+    header nav:hover ul {display: flex;
+                        flex-flow: column nowrap;
+                       
+                        }
+    header nav:hover:before {display: none;}
+   
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+}
+
+.blue {
+    color: #4bcaff;
+}
+
+.edge {
+    padding-left: 16vw;
+    padding-right: 16vw;
+}
+
+.border {
+    border: 1px solid #4bcaff; 
+}
+
+.title {
+  font-size: 30px;  
+}
+
+h2 {
+    margin: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+h2:after {
+    content: "";
+    width: 55px;
+    height: 2px;
+    display: block;
+}
+/***************************************** Header ************************************/
+
+header {
+    position: fixed;
+    background-color: rgba(71, 81, 89, 0.85);
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header p {
+    font-family: SegoeUI;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 2.5vw;
+    margin-bottom: 2vw;
+    margin-left: 16vw;
+}
+
+header nav {
+   margin-right: 16vw;
+}
+
+ul.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+   
+}
+
+ul.menu a {
+    text-transform:uppercase;
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    font-family: SegoeUI;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+ul.menu a:hover {
+   color: #4bcaff; 
+}
+
+ul.menu a:active {
+   color: #4bcaff; 
+   border: 1px solid #4bcaff; 
+}
+.photo {
+    height: 100%;
+    background-image: url(photo/background_photo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+.photo blockquote {
+    display: block;
+    text-align: center;
+    font-family: SegoeUI;
+    font-size: 3vw;
+    margin: 0 auto;
+    padding-top: 20%;
+    padding-bottom: 10%;
+}
+
+.photo blockquote p {
+    display: inline;
+    background-color: rgba(71, 81, 89, 0.85);
+    color: #fff;
+    line-height: 8vw;
+    padding: 0.5vw;
+}
+
+@media (max-width: 600px) {
+    .photo blockquote {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 660px) {
+    header p{
+        margin-left: 8vw;
+    }
+    header nav {
+        margin-right: 8vw;
+    }
+}
+/***************************************** Services ************************************/
+
+section#services {
+    background-color: #4bcaff;
+    font-family: SegoeUI;
+    color: #fff;
+}
+
+section#services>div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-bottom: 3vw;
+}
+
+section#services .service {
+    flex: 1 1 200px;
+    margin-right: 5px;
+   
+}
+
+section#services h2 {
+    padding-top: 3vw;
+    padding-bottom: 1.5vw;
+}
+
+section#services h2:after {
+    background-color: #fff;
+}
+
+section#services .service h3 {
+    font-size: 24px;
+    margin: 10px 0 5px 0;
+    padding: 5px;
+    text-transform: uppercase;
+}
+section#services .service p {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 5px;
+}
+
+section#services .service:before {
+    content: "";
+    width: 48px;
+    height: 48px;
+    display: block;
+    padding-left: 10px;
+}
+
+section#services .service:nth-child(1):before {
+    background: url(photo/coffee.png) center no-repeat;
+}
+section#services .service:nth-child(2):before {
+    background: url(photo/instant.png) center no-repeat;
+}
+section#services .service:nth-child(3):before {
+    background: url(photo/serious.png) center no-repeat;
+}
+section#services .service:nth-child(4):before {
+    background: url(photo/frame.png) center no-repeat;
+}
+
+@media (max-width: 750px) {
+    section#services>div {
+        flex-wrap: wrap;
+    } 
+    
+    section#services .service {
+    flex: 1 1 200px;
+    margin-right: 20px;
+    margin-top: 2vw;
+   
+}
+    section#services .service h3 {
+    font-size: 16px;
+    }
+}
+
+@media (max-width: 520px) {
+    section#services .service p {
+        text-align: justify;
+        margin-left: 60px;
+    }
+    section#services .service h3 {
+        margin-left: 60px;
+        margin-top: -60px;
+        margin-bottom: 0
+    }
+    section#services .service {
+        margin-top: 20px;
+    }
+}
+
+/***************************************** Portfolio ************************************/
+
+main#portfolio {
+    color: #515f67;
+}
+
+main#portfolio>div:first-of-type{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vw;
+    margin-bottom: 1.5vw;
+}
+
+main#portfolio ul {
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding-left: 0;
+}
+
+main#portfolio h2:after {
+    background-color: #515f67;
+}
+
+main#portfolio a {
+    color: #515f67;
+    padding-left: 0;
+}
+
+main#portfolio a:hover {
+    color: #4bcaff;
+}
+
+main#portfolio .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+main#portfolio .picture {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+main#portfolio img:hover{
+    cursor: crosshair;
+    opacity: 0.2;
+}
+main#portfolio .picture:hover {
+    width: 240px;
+    height: 240px;
+    background: rgba(64, 73, 80, 0.9);
+    
+}
+
+@media (max-width: 820px) {
+    main#portfolio>div:first-of-type {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+    main#portfolio ul {
+        justify-content: flex-start;
+    }
+    main#portfolio .wrapper {
+        justify-content: flex-start;
+    }
+}
+
+
+/**************************************MODAL*********************************************************************************/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10vh auto;
+    border: 1px solid #888;
+    width: 70vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    min-height: 330px;
+}
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    order: 3;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    top: 45%;
+    padding: 16px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: -8vw;
+}
+.next {
+    right: -10vw;
+    border-radius: 0 3px 3px 0;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/***************************************** Slider ************************************/
+main#portfolio .picture div {
+    display: none;
+}
+
+.modal-content div {
+    width: 30vw;
+    padding: 4vw 1vw 1vw 3vw;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.modal-content div h5 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slide-show {
+    width: 40vw;
+    min-width: 320px;
+    height: auto;
+    cursor: default;
+    opacity: 1;
+}
+
+.modal-content div p:last-child {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+@media (max-width: 820px) {
+    main#portfolio {
+        padding-right: 0;
+    }
+    .modal-content {
+        flex-flow: column nowrap;
+        position: relative;
+        height: 80vw;
+        min-width: 320px;
+    }
+    .modal-content div {
+        background-color: #fff;
+        width: 100%;
+        padding-left: 40px;
+    }
+    .modal-content div h5 {
+        margin-top: 0;
+    }
+    .slide-show {
+        width: 70vw;
+    }
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .prev {
+        left: 10px;
+        top: 90%;
+    }
+    .next {
+        right: 0;
+        top: 90%;
+    }
+}
+
+/***************************************** Video ************************************/
+
+section.video {
+    background-color: #515f67;
+    color: #fff;
+    margin-top: 4vw;
+    padding-bottom: 4vw;
+    padding-top: 4vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 6vw;
+}
+
+section.video h2 {
+    padding-bottom: 1vw;
+    grid-column: 1/2;
+    margin-left: 0;
+}
+
+section.video h2:after {
+    background-color: #fff;
+}
+
+section.video p {
+    font-family: SegoeUI;
+    font-size: 12px;
+    padding: 10px 0;
+    grid-column: 1/2;
+    margin: 0;
+    text-align: justify;
+}
+
+section.video .button {
+    grid-column: 1/2;
+    border: 2px solid #353f46;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+section.video .button:hover {
+    background-color: #353f47;
+}
+
+section.video .button:hover a {
+    color: #fff;
+}
+
+section.video .button  a {
+    color: #353f46;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    margin: 2px 0;
+}
+
+section.video video {
+    grid-column: 2/3;
+    grid-row: 1/5;
+    align-self: center;
+}
+
+@media (max-width: 900px) {
+    section.video {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    } 
+    
+   section.video video {
+    grid-column: 1/2;
+    grid-row: 4/5;
+
+} 
+}
+
+/***************************************** Twitter ************************************/
+section.twit {
+    background-color: #4bcaff;
+    color: #fff;
+}
+
+section.twit h2 {
+    padding-top: 3vw;
+    margin-bottom: 2vw;
+}
+
+/*section.twit h2:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url(photo/icon-twitter.png) center no-repeat;
+}*/
+
+section.twit>div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.twit .twit-icon {
+    width: 50px;
+    height: 50px;
+    background: url(photo/icon-twitter.png) center no-repeat;
+}
+
+section.twit h2:after {
+    background-color: #fff;
+}
+
+section.twit p{
+    font-family: SegoeUI;
+    font-size: 24px;
+    padding-bottom: 2vw;
+    margin-bottom: 0;
+
+}
+
+section.twit span {
+    font-weight: bolder;
+}
+
+
+/***************************************** About ************************************/
+
+section.about {
+    background: url(photo/bg2-photo.png) center/cover no-repeat;
+}
+
+section.about h2 {
+    color:#fff;
+    padding-top: 4vw;
+    margin-bottom: 2vw;
+}
+
+section.about h2:after {
+    background-color: #fff;
+}
+
+section.about>div {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 6vw;
+}
+
+section.about p {
+    color: #fff;
+    display: inline-block;
+    flex: 1 1 460px;
+    margin-right: 20px;
+    text-align: justify;
+}
+
+section.about .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 15px;
+    flex: 1 1 460px;
+}
+
+section.about .social div {
+    width: 4vw;
+    min-width: 40px;
+    height: 4vw;
+    min-height: 40px;
+    border: 1px solid #fff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+section.about .social div:nth-child(1) {
+    background: url(photo/icon-twitter.png) center no-repeat;
+}
+
+section.about .social div:nth-child(2) {
+    background: url(photo/icon-google-plus.png) center no-repeat;
+}
+
+section.about .social div:nth-child(3) {
+    background: url(photo/icon-dribbble.png) center no-repeat;
+}
+
+section.about .social div:nth-child(4) {
+    background: url(photo/icon-coffee.png) center no-repeat;
+}
+
+/***************************************** Quote ************************************/
+
+section.quote {
+    font-family: SegoeUI;
+    color: #515f67;
+}
+section.quote h2 {
+    padding-top: 3vw; 
+}
+
+section.quote h2:before {
+    content: "\275C\275C";
+    position: absolute;
+    right: 16vw;
+    margin-top: -0.5vw;
+    font-size: 40px;
+}
+section.quote h2:after {
+    background-color: #515f67;
+}
+
+section.quote blockquote {
+    margin: 2vw 0 5vw 0;
+}
+
+section.quote p {
+    font-size: 24px;
+}
+
+section.quote p:last-of-type {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/***************************************** Contacts ************************************/
+
+section#contacts {
+    background: url(photo/bg3-photo.png) center/cover no-repeat;
+    color: #fff;
+    font-family: SegoeUI;
+}
+
+section#contacts h2 {
+    padding-top: 3vw;
+}
+
+section#contacts h2:after {
+    background-color: #fff;
+}
+
+section#contacts form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    padding-bottom: 4vw;
+    grid-column-gap: 6vw;
+    
+}
+
+section#contacts form label {
+    grid-column: 1/2;
+    text-transform: uppercase;
+    align-self: end;
+    font-size: 14px;
+    margin-top: 3vw;
+}
+
+section#contacts form input, section#contacts button, section#contacts textarea {
+    grid-column: 1/2;
+}
+
+section#contacts form input {
+    background: transparent;
+    border: 2px solid #fff;
+    height: 3vw;
+    min-height: 30px;
+    margin-top: 0.5vw;
+    color: #fff;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+section#contacts form p {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin: 0;
+    font-size: 14px;
+    align-self: end;
+    text-align: justify;
+}
+
+section#contacts form ul {
+    grid-column: 2/3;
+    grid-row: 3/5;
+}
+
+section#contacts textarea {
+    grid-column: 1/3;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+}
+
+section#contacts button {
+    background-color: #4bcaff;
+    width: 25vw;
+    min-width: 180px;
+    height: 3vw;
+    min-height: 40px;
+    border: none;
+    margin-top: 2vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: SegoeUI;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+section#contacts ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 14px;
+    align-self: end;
+}
+
+@media (max-width: 1000px) {
+    section#contacts form {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-row-gap: 5px;
+        
+    }
+    section#contacts form p {
+    grid-column: 1/2;
+    margin-top: 3vw;
+}
+
+section#contacts form ul {
+    grid-column: 1/2;
+    margin-top: 1vw;
+}
+    section#contacts form label {
+     margin-top: 1vw;
+    }
+    section#contacts textarea {
+        grid-column: 1/2;
+    }
+}
+
+/***************************************** Footer ************************************/
+
+footer {
+    background-color: #353f47;
+    color: #515f67;
+    font-family: SegoeUI;
+    font-size: 14px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2vw 16vw;
+}
+
+footer ul {
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: row nowrap;
+    padding-left: 0;
+    
+}
+
+footer a {
+    text-decoration: none;
+    color: #515f67;
+    position: relative;
+    margin-right: 20px;
+}
+
+footer a:after {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 1px;
+    background-color: #515f67;
+    top: 25%;
+    right: -10px;
+}
+
+footer a:hover {
+    color: #4bcaff;
+}
+
+@media (max-width: 350px) {
+    .title {font-size: 22px;  
+    }
+}
+
+@media (max-width: 440px) {
+    footer {
+        flex-flow: column;
+        align-items: flex-start;
+        padding-bottom: 20px;
+    }
+    footer p {
+        align-self: center;
+        margin: 0;
+    }
+    
+}
+
+@media (max-width: 660px) {
+    footer {
+        font-size: 12px;
+    }
+    .edge {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+    section.quote p, section.twit p {
+    font-size: 18px;
+}
+}

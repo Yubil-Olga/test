@@ -10,13 +10,13 @@ body {
 /**********************HEADER************************/
 header {
 	position: fixed;
-    width: 25%;
+    width: 400px;
     min-height: 100vh;
-    padding-top: 20px;
     overflow: hidden;
     background-color: #c6e2ee;
     color: #fff;
     display: flex;
+    justify-content: center;
     flex-flow: column;
     align-items: center;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
@@ -31,16 +31,37 @@ header .my-photo {
 	height: 180px;
 	border-radius: 50%;
 	overflow: hidden;
-	margin: 50px auto;
+	margin: 30px auto;
 }
 header img {
 	width: 100%;
 }
+.about p:first-child {
+	text-align: center;
+}
+.about p, .social p {
+	text-align: justify;
+	padding: 10px 30px;
+	color: #2f2f2f;
+	position: relative;
+}
+#map:before, #mail:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+}
+#map:before {
+	background: url(images/map-marker.png) center/contain no-repeat;
+}
+#mail:before {
+	background: url(images/mail.png) center/contain no-repeat;
+}
 /*************************MAIN********************************/
 main {
-	margin-left: 25%;
+	margin-left: 400px;
 	border-left: 5px solid #eee;
-	height: 100vh;
 	padding: 30px var(--common-padding) 30px 0;
 }
 main ul {
@@ -91,21 +112,21 @@ main h2:after {
 	box-sizing: border-box;
 }
 
-@media (max-width: 800px){
+@media (max-width: 910px){
 	header {
 		width: 100%;
 		min-height: unset;
 		padding: 0 var(--common-padding);
-		flex-flow: row;
-		justify-content: space-between;
+		padding-bottom: 15px;
+		flex-flow: row wrap;
+		justify-content: center;
 		position: unset;
 		box-sizing: border-box;
 	}
 	header .my-photo {
 		width: 100px;
 		height: 100px;
-		margin: 40px 0;
-		order: -1;
+		margin: 30px;
 		flex-shrink: 0;
 	}
 	header h1 {
@@ -113,6 +134,10 @@ main h2:after {
 	}
 	header p {
 		text-align: right;
+	}
+	.about p {
+		padding: 0;
+		line-height: 30px;
 	}
 	main {
 		margin-left: 0;
@@ -126,7 +151,7 @@ main h2:after {
 }
 @media (max-width: 400px){
 	body {
-		--common-padding: 20px;
+		--common-padding: 30px;
 	}
 	header h1 {
 		font-size: 26px;
@@ -135,4 +160,5 @@ main h2:after {
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		padding-left: 20px;
 	}
+
 }
