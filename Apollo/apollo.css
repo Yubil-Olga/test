@@ -175,8 +175,6 @@ section[class|="gallery"] img {
 	position: fixed;
 	top: 1vw;
 	right: 2vw;
-	color: #fff;
-	font-size: 30px;
 	z-index: 100;
 	cursor: pointer;
 }
