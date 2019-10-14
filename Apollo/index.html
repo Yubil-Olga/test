@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Apollo</title>
+	<link rel="stylesheet" href="apollo.css">
+	<link rel="stylesheet" href="swiper.min.css">
+</head>
+<body>
+	<section class="header">
+		<nav>
+			<h3>Menu
+			<svg class="hide">
+				<polyline id="top" points="0,8 15,8 30,8" />
+				<polyline id="middle" points="0,15 15,15 30,15" />
+				<polyline id="bottom" points="0,22 15,22 30,22" />
+			</svg></h3>
+			
+			<ul class="navigation">
+				<li>Home</li>
+				<li>About</li>
+				<li>Portfolio</li>
+				<li>Prices</li>
+				<li>Contacts</li>
+			</ul>
+		</nav>
+		<div class="header_text">
+			<h1>Apollo <span>PSD Template</span></h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+	</section>
+	<section class="about">
+		<div class="about_text">
+			<h2><span>&mdash; My name is</span> Apollo</h2>
+			<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+			</p> 
+			<p>Ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+			</p>
+				<ul class="about_social">
+					<li><a href="#"><img src="images/social-facebook.png" alt="facebook" onclick="event.preventDefault()"></a></li>
+					<li><a href="#"><img src="images/social-instagram.png" alt="instagram" onclick="event.preventDefault()"></a></li>
+					<li><a href="#"><img src="images/social-twitter.png" alt="twitter" onclick="event.preventDefault()"></a></li>
+					<li><a href="#"><img src="images/social-pinterest.png" alt="pinterest" onclick="event.preventDefault()"></a></li>
+				</ul>
+			</div>
+		</section>
+	<section class="gallery-1">
+		<div class="swiper-container">
+   			 <div class="swiper-wrapper">
+		        <div class="swiper-slide"><img src="images/gallery1_1.png" alt="apollo"></div>
+		        <div class="swiper-slide"><img src="images/gallery1_2.jpg" alt="apollo"></div>
+		        <div class="swiper-slide"><img src="images/gallery1_3.jpg" alt="apollo"></div>
+		        <div class="swiper-slide"><img src="images/gallery1_4.jpg" alt="apollo"></div>
+		        <div class="swiper-slide"><img src="images/gallery1_5.jpg" alt="apollo"></div>
+   			 </div>
+    
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
+	</section>
+	<section class="info">
+		<div class="info_text">
+			<h2>Ut enim <span>ad minim</span></h2>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+			ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+		</div>
+		<img src="images/apollo-photo1.png" alt="apollo">
+	</section>
+	<section class="gallery-2">
+		<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/gallery2_1.png"></div>
+      <div class="swiper-slide"><img src="images/gallery2_2.png"></div>
+      <div class="swiper-slide"><img src="images/gallery2_3.png"></div>
+      <div class="swiper-slide"><img src="images/gallery2_4.jpg"></div>
+      <div class="swiper-slide"><img src="images/gallery2_5.jpg"></div>
+      <div class="swiper-slide"><img src="images/gallery2_6.jpg"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <span id="close">&#10006;</span>
+	</section>
+	<section class="form">
+		<h2>Say <span>Hello</span></h2>
+		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+		ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non.
+		ius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+		</p>
+		<form>
+			<input type="email" name="email" placeholder="Your Email" required>
+			<input type="text" name="subject" placeholder="Subject">
+			<textarea name="message" placeholder="Message" required></textarea>
+			<button type="submit" onclick="event.preventDefault()">Send message</button>
+		</form>
+	</section>
+	<script src="js/anime.min.js"></script>
+	<script src="js/apollo_anime.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/apollo_swiper.js"></script>
+</body>
+</html>
